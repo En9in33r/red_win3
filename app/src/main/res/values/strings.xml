@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">red_win3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_home">Hello!</string>
+    <string name="home_first">I\'m very glad to see you in my own blog-app (you can also call it journal-app or photo-album, as you please).</string>
+    <string name="home_second">I created it for demonstration of my skills as a software developer and also telling something about my life activities to other people.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
