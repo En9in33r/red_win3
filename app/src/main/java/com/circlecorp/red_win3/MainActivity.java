@@ -56,20 +56,25 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        HomeFragment fragment = new HomeFragment();
-        transaction.replace(R.id.container, fragment);
-        transaction.commit();
 
         avatarHeader = navigationView.getHeaderView(0).findViewById(R.id.avatar_header);
         nameHeader = navigationView.getHeaderView(0).findViewById(R.id.name_header);
 
         header = new HeaderJSONCatcher(this);
         header.execute();
+    }
+
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        HomeFragment fragment = new HomeFragment();
+        transaction.replace(R.id.container, fragment);
+        transaction.commit();
     }
 
     @Override
@@ -129,7 +134,6 @@ public class MainActivity extends AppCompatActivity
         protected void onPreExecute()
         {
             super.onPreExecute();
-
 
             dialog.setMessage("Please wait...");
             dialog.setIndeterminate(false);

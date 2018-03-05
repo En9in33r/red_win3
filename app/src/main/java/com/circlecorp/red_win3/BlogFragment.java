@@ -50,7 +50,8 @@ public class BlogFragment extends Fragment
                     JSONObject jo = (JSONObject)array.get(i);
                     JSONObject image = jo.getJSONObject("image");
 
-                    items.add(new BlogItem(jo.getString("content_text"), image.getString("url")));
+                    items.add(new BlogItem(jo.getString("content_text"), image.getString("url"),
+                            jo.getString("id"), jo.getString("likes")));
                 }
             }
         }
