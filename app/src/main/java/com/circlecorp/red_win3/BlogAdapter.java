@@ -159,7 +159,7 @@ public class BlogAdapter extends BaseAdapter
                             JSONObject element = new JSONObject(jsonina);
 
                             ((TextView)viewe.findViewById(R.id.numberOfLikes)).setText(element.getString("likes"));
-                            Toast.makeText(context, element.getString("likes"), Toast.LENGTH_LONG).show();
+                            // Toast.makeText(context, element.getString("likes"), Toast.LENGTH_LONG).show();
                         }
                     }
                     catch (InterruptedException | ExecutionException | JSONException e)
@@ -189,7 +189,7 @@ public class BlogAdapter extends BaseAdapter
                             JSONObject element = new JSONObject(jsonina);
 
                             ((TextView)viewe.findViewById(R.id.numberOfLikes)).setText(element.getString("likes"));
-                            Toast.makeText(context, element.getString("likes"), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(context, element.getString("likes"), Toast.LENGTH_LONG).show();
                         }
                     }
                     catch (InterruptedException | ExecutionException | JSONException e)
