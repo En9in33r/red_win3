@@ -6,6 +6,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -105,12 +106,17 @@ public class InstagramFragment extends Fragment
 
                         ViewPhotoFragment.image_url = pur13.getString("url");
 
+                        /*
                         ViewPhotoFragment fragment = new ViewPhotoFragment();
                         FragmentManager manager = getFragmentManager();
                         FragmentTransaction transaction = manager.beginTransaction();
                         transaction.replace(R.id.container, fragment);
                         transaction.addToBackStack(null);
                         transaction.commit();
+                        */
+
+                        DialogFragment fragment = new ViewPhotoFragment();
+                        fragment.show(getFragmentManager(), "view_photo");
                     }
                     catch (JSONException e)
                     {
